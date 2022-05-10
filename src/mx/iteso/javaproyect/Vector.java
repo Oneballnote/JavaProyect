@@ -1,42 +1,59 @@
 package mx.iteso.javaproyect;
 
-public class Vector {
-    private double valorX, valorY, valorZ;
+public class Vector implements Operators{
+    private double[] vect = new double[3];
 
-    public Vector(double valorX, double valorY){
-        setValorX(valorX);
-        setValorY(valorY);
-    } 
-    public Vector(double valorX, double valorY, double valorZ){
-        setValorX(valorX);
-        setValorY(valorY);
-        setValorZ(valorZ);
+   public Vector(double[] vect){
+        this.vect = vect;
+   }
+
+    public void setVect(double[] vect) {
+        this.vect = vect;
     }
 
-    public void setValorX(double valorX) {
-        this.valorX = valorX;
-    }
-    public void setValorY(double valorY) {
-        this.valorY = valorY;
-    }
-    public void setValorZ(double valorZ) {
-        this.valorZ = valorZ;
-    }
-    public double getValorX() {
-        return valorX;
-    }
-    public double getValorY() {
-        return valorY;
-    }
-    public double getValorZ() {
-        return valorZ;
+    public double[] getVect() {
+        return vect;
     }
 
-    public void multiplicacionPorEscalar(int escalar){
-        this.valorX = this.valorX*escalar;
-        this.valorY = this.valorY*escalar;
-        this.valorZ = this.valorZ*escalar;
+   
+    
+
+    @Override
+    public double[][] suma(double[][] x, double[][] y) {
+        // TODO Auto-generated method stub
+        return null;
     }
 
+    @Override
+    public double[][] resta(double[][] x, double[][] y) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public double[][] producto(double[][] x, double[][] y) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public double[][] productoxEscalar(double[][] x, int y) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public String toString(){
+
+        String msg = " ";
+        if(this.vect[2] == 0 ){
+            msg = String.format("Vector: [%.2f], [%.2f]", this.vect[0],this.vect[1]);
+
+        }else{
+            msg = String.format("Vector: [%.2f], [%.2f], [%.2f]", this.vect[0],this.vect[1],this.vect[2]);
+
+        }
+        return msg;
+    }
     
 }

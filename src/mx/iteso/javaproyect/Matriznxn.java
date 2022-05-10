@@ -1,6 +1,6 @@
 package mx.iteso.javaproyect;
 
-public class Matriznxn implements operators{
+public class Matriznxn implements Operators{
 	
 	private double M1[][] = new double [3][3];
 	private double M2[][] = new double [3][3];
@@ -55,7 +55,7 @@ public class Matriznxn implements operators{
 	}
 
 	@Override
-	public double[][] suma() {
+	public double[][] suma(double[][] x, double[][] y) {
 		for(int i = 0; i < M1.length; i++)
 		{
 			for(int j = 0; i < M2.length; i++)
@@ -67,7 +67,7 @@ public class Matriznxn implements operators{
 	}
 
 	@Override
-	public double[][] resta() {
+	public double[][] resta(double[][] x, double[][] y) {
 		for(int i = 0; i < M1.length; i++)
 		{
 			for(int j = 0; i < M2.length; i++)
@@ -79,16 +79,17 @@ public class Matriznxn implements operators{
 	}
 
 	@Override
-	public double[][] producto() {
+	public double[][] producto(double[][] x, double[][] y) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
-	public double[][] productoxEscalar() {
+	public double[][] productoxEscalar(double[][] x, int y) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
+	
 	
 	public void imprimirMatriz() {
 		
@@ -124,5 +125,29 @@ public class Matriznxn implements operators{
 			}
 			System.out.println(" ");
 		}
+	}
+
+	@Override
+	public double[][] suma(double[][] x, double[][] y) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public double[][] resta(double[][] x, double[][] y) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public double[][] producto(double[][] x, double[][] y) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public double[][] productoxEscalar(double[][] x, int y) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

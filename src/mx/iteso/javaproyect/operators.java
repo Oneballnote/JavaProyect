@@ -1,10 +1,10 @@
 package mx.iteso.javaproyect;
 
-public interface operators {
+public interface Operators {
 
-	public abstract double[][] suma();
-	public abstract double[][] resta();
-	public abstract double[][] producto();
-	public abstract double[][] productoxEscalar();
+	public double[][] suma(double[][] x, double[][] y);
+	public double[][] resta(double[][] x, double[][] y);
+	public double[][] producto(double[][] x, double[][] y);
+	public double[][] productoxEscalar(double[][] x, int y);
 	
 }
