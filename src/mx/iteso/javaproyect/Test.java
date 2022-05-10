@@ -7,7 +7,6 @@ public class Test {
         Vector lolo = new Vector(vect1);
         vect1[0] = 10;
         vect1[1] = 1;
-            
         System.out.println(lolo.toString());
     }
 }

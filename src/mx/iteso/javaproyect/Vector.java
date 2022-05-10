@@ -16,30 +16,31 @@ public class Vector implements Operators{
     }
 
    
-    
 
-    @Override
-    public double[][] suma(double[][] x, double[][] y) {
-        // TODO Auto-generated method stub
+    public double[] suma(double[] x) {
+
+        for(int i = 0; i < 3;i++){
+            this.vect[i] += x[i];
+        } 
+        return this.vect;
+    }
+
+ 
+    public double[] resta(double[] x) {
+        for(int i = 0; i < 3;i++){
+            this.vect[i] -= x[i];
+        }
         return null;
     }
 
-    @Override
-    public double[][] resta(double[][] x, double[][] y) {
-        // TODO Auto-generated method stub
-        return null;
-    }
 
-    @Override
-    public double[][] producto(double[][] x, double[][] y) {
-        // TODO Auto-generated method stub
-        return null;
-    }
 
-    @Override
-    public double[][] productoxEscalar(double[][] x, int y) {
-        // TODO Auto-generated method stub
-        return null;
+  
+    public double[] productoxEscalar(int y) {
+        for(int i = 0; i < 3;i++){
+            this.vect[i] *= y;
+        }
+        return this.vect;
     }
 
     @Override
@@ -54,6 +55,12 @@ public class Vector implements Operators{
 
         }
         return msg;
+    }
+
+    @Override
+    public boolean independenciaLineal() {
+        // TODO Auto-generated method stub
+        return false;
     }
     
 }

@@ -54,8 +54,8 @@ public class Matriznxn implements Operators{
 
 	}
 
-	@Override
-	public double[][] suma(double[][] x, double[][] y) {
+
+	public double[][] suma(double[][] x) {
 		for(int i = 0; i < M1.length; i++)
 		{
 			for(int j = 0; i < M2.length; i++)
@@ -66,8 +66,8 @@ public class Matriznxn implements Operators{
 		return this.MR;
 	}
 
-	@Override
-	public double[][] resta(double[][] x, double[][] y) {
+
+	public double[][] resta(double[][] x) {
 		for(int i = 0; i < M1.length; i++)
 		{
 			for(int j = 0; i < M2.length; i++)
@@ -78,14 +78,14 @@ public class Matriznxn implements Operators{
 		return MR;
 	}
 
-	@Override
-	public double[][] producto(double[][] x, double[][] y) {
+
+	public double[][] producto(double[][] x) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public double[][] productoxEscalar(double[][] x, int y) {
+
+	public double[][] productoxEscalar(int y) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -128,26 +128,10 @@ public class Matriznxn implements Operators{
 	}
 
 	@Override
-	public double[][] suma(double[][] x, double[][] y) {
+	public boolean independenciaLineal() {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
-	@Override
-	public double[][] resta(double[][] x, double[][] y) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public double[][] producto(double[][] x, double[][] y) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public double[][] productoxEscalar(double[][] x, int y) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 }
