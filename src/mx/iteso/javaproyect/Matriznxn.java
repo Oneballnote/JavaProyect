@@ -72,10 +72,10 @@ public class Matriznxn implements Operators{
 		{
 			for(int j = 0; i < M2.length; i++)
 			{
-				MR[i][j] = M1[i][j] - M2[i][j];
+				this.MR[i][j] = M1[i][j] - M2[i][j];
 			}
 		}				
-		return MR;
+		return this.MR;
 	}
 
 
