@@ -1,9 +1,11 @@
 package mx.iteso.javaproyect;
 
-public interface OperatorsM {
+public interface operatorsM {
 
-	public double[][] productoxEscalar(int y);
+	public abstract double[][] productoxEscalar(int z);
+	public abstract boolean baseCanonica(double[][] lolo);
 	public abstract double [][] suma(double[][] x);
-	public abstract double [][] resta(double[][] y);	
-	
+	public abstract double [][] resta(double[][] y);
+	double[][] MultipM(double[][] r);
+		
 }

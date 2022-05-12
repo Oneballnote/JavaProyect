@@ -1,6 +1,6 @@
 package mx.iteso.javaproyect;
 
-public class Matriznxn extends OperadoresM{
+public class Matriznxn extends MetodosMatriz{
 	
 	
 	// determinante

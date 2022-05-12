@@ -43,16 +43,22 @@ public class Vector implements OperatorsVect{
 
     @Override
     public String toString(){
-
         String msg = " ";
-        if(this.vect[2] == 0 ){
+
+        try{
+            if(this.vect[2] == 0 ){
+                msg = String.format("Vector: [%.2f], [%.2f]", this.vect[0],this.vect[1]);
+    
+            }else{
+                msg = String.format("Vector: [%.2f], [%.2f], [%.2f]", this.vect[0],this.vect[1],this.vect[2]);
+                
+            }
+        }catch(ArrayIndexOutOfBoundsException e){
+           
             msg = String.format("Vector: [%.2f], [%.2f]", this.vect[0],this.vect[1]);
 
-        }else{
-            msg = String.format("Vector: [%.2f], [%.2f], [%.2f]", this.vect[0],this.vect[1],this.vect[2]);
-
         }
-        return msg;
+            return msg;
     }
     public double[] productoCruz(double[] segundaMatriz){
         try {
