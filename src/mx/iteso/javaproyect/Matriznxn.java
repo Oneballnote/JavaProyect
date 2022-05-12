@@ -5,7 +5,7 @@ public class Matriznxn extends MetodosMatriz{
 	
 	// determinante
 
-	public Matriznxn(double[][] MR) {
+	public Matriznxn(int[][] MR) {
 		super(MR);
 	}
 	

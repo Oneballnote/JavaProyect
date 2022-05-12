@@ -1,20 +1,20 @@
 package mx.iteso.javaproyect;
 
-public class MetodosMatriz implements OperatorsMatriz{
-    protected double MR[][]; 
+public class MetodosMatriz extends Determinante implements OperatorsMatriz{
+    protected int MR[][]; 
 	
-	public MetodosMatriz(double[][] M1){
+	public MetodosMatriz(int[][] M1){
 		setMR(M1);
 	}
 
-	public double[][] getMR() {return MR;}
+	public int[][] getMR() {return MR;}
 
-	public void setMR(double[][] mR) {
+	public void setMR(int[][] mR) {
 		MR = mR;
 	}
 		
 	@Override
-	public double[][] suma(double[][] matrizASumar) {
+	public int[][] suma(int[][] matrizASumar) {
 		for(int i = 0; i < MR.length; i++)
 		{
 			for(int j = 0; j < MR.length; j++)
@@ -26,7 +26,7 @@ public class MetodosMatriz implements OperatorsMatriz{
 	}
 
 	@Override
-	public double[][] resta(double[][] matrizARestar) {
+	public int[][] resta(int[][] matrizARestar) {
 		for(int i = 0; i < MR.length; i++)
 		{
 			for(int j = 0; j < MR.length; j++)
@@ -38,7 +38,7 @@ public class MetodosMatriz implements OperatorsMatriz{
 	}
 
 	@Override
-	public double[][] productoxEscalar(int z) {
+	public int[][] productoxEscalar(int z) {
 		for(int i = 0; i < MR.length; i++)
 		{
 			for(int j = 0; j < MR.length; j++)
@@ -50,14 +50,14 @@ public class MetodosMatriz implements OperatorsMatriz{
 	}
 
 	@Override
-	public boolean baseCanonica(double[][] lolo) {
+	public boolean baseCanonica(int[][] lolo) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public double[][] MultipM(double[][] r) {
-		double[][] c = new double[this.MR.length][r[0].length];
+	public int[][] MultipM(int[][] r) {
+		int[][] c = new int[this.MR.length][r[0].length];
 	    // se comprueba si las matrices se pueden multiplicar
 	    if (this.MR[0].length == r.length) {
 	        for (int i = 0; i < this.MR.length; i++) {
