@@ -36,4 +36,13 @@ public class OperadoresM implements OperatorsM{
 		}				
 		return MR;
 	}
+
+    public double[][] productoxEscalar(int y){
+        for (int i = 0; i < MR.length; i++) {
+            for (int j = 0; j < MR.length; j++) {
+                this.MR[i][j] *= y;
+            }
+        }
+        return this.MR;
+    }
 }
