@@ -15,8 +15,6 @@ public class Vector implements Operators{
         return vect;
     }
 
-   
-
     public double[] suma(double[] x) {
 
         for(int i = 0; i < 3;i++){
@@ -61,6 +59,32 @@ public class Vector implements Operators{
     public boolean independenciaLineal() {
         // TODO Auto-generated method stub
         return false;
+    }
+    @Override
+    public boolean baseCanonica(double[] lolo){
+        if(((lolo[0] == 1)&&(lolo[1] == 0)||(lolo[0] == 0) && (lolo[1] == 1))&&((this.vect[0] == 1)&&(this.vect[1] == 0)||(this.vect[0] == 0) && (this.vect[1] == 1))){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean baseCanonica(T lolo) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+    
+    
+    public boolean equalS(Vector o){
+        double[] lolo = o.getVect();
+
+        for (int i = 0; i < 3; i++) {
+            if(this.vect[i] != lolo[i]){
+                return false;
+            }
+        }
+        return true;
+        
     }
     
 }

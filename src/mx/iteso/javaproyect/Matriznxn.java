@@ -132,6 +132,13 @@ public class Matriznxn implements Operators{
 		// TODO Auto-generated method stub
 		return false;
 	}
+	@Override
+	public boolean baseCanonica(double[] lolo, double[] lala){
+	
+		
+		
+		return false;
+	}
 
 	
 }

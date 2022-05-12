@@ -1,9 +1,9 @@
 package mx.iteso.javaproyect;
 
-public interface Operators {
+public interface Operators  {
 
 	public boolean independenciaLineal();
-	public boolean baseCanonica();
-	//public double[][] productoxEscalar(int y);
+	public boolean baseCanonica(double[] lolo);
+	public Object productoxEscalar(int y);
 	
 }
