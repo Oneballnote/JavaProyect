@@ -8,6 +8,7 @@ public interface OperatorsVect  {
 	public double[] resta(double[] lolo);
 	public boolean independenciaLineal();
 	public boolean baseCanonica(double[] lolo);
+	public double[] productoCruz(double[] lolo);
 	
 
 	

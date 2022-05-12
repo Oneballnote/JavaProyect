@@ -54,6 +54,23 @@ public class Vector implements OperatorsVect{
         }
         return msg;
     }
+    public double[] productoCruz(double[] segundaMatriz){
+        try {
+            if((segundaMatriz.length != 3) && (this.vect.length !=3)){
+           
+                throw new ManejoDeExcepciones(); 
+            }else{
+                segundaMatriz[0] = (this.vect[1]*segundaMatriz[2])-(this.vect[2]*segundaMatriz[1]); 
+                segundaMatriz[1] = (this.vect[2]*segundaMatriz[0])-(this.vect[0]*segundaMatriz[2]);
+                segundaMatriz[2] = (this.vect[0]*segundaMatriz[1])-(this.vect[1]*segundaMatriz[0]);
+                return this.vect;
+            }
+        } catch (ManejoDeExcepciones e) {
+            System.out.println("Este metodo funciona solo con vectores en R3");
+        }
+       
+        return segundaMatriz;
+    }
 
     @Override
     public boolean independenciaLineal() {

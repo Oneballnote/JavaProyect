@@ -1,6 +1,6 @@
 package mx.iteso.javaproyect;
 
-public class OperadoresM implements operatorsM{
+public class OperadoresM implements OperatorsM{
     protected double MR[][]; 
 	
 	public OperadoresM(double[][] M1){
@@ -61,7 +61,7 @@ public class OperadoresM implements operatorsM{
 		return false;
 	}
 
-	@Override
+	
 	public void obtenerCofactor(int[][] M, int[][] temp, int p, int q, int n) {
 		int i = 0; int j = 0;
 		for(int fila = 0; fila < n; fila++)
