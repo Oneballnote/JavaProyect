@@ -1,11 +1,11 @@
 package mx.iteso.javaproyect;
 
-public class Vector implements Operators{
+public class Vector implements OperatorsVect{
     private double[] vect = new double[3];
 
    public Vector(double[] vect){
-        this.vect = vect;
-   }
+        setVect(vect);
+    }
 
     public void setVect(double[] vect) {
         this.vect = vect;
@@ -18,7 +18,7 @@ public class Vector implements Operators{
     public double[] suma(double[] x) {
 
         for(int i = 0; i < 3;i++){
-            this.vect[i] += x[i];
+            this.vect[i] = (double) x[i];
         } 
         return this.vect;
     }
@@ -31,9 +31,7 @@ public class Vector implements Operators{
         return null;
     }
 
-
-
-  
+ 
     public double[] productoxEscalar(int y) {
         for(int i = 0; i < 3;i++){
             this.vect[i] *= y;
@@ -62,18 +60,14 @@ public class Vector implements Operators{
     }
     @Override
     public boolean baseCanonica(double[] lolo){
+        
         if(((lolo[0] == 1)&&(lolo[1] == 0)||(lolo[0] == 0) && (lolo[1] == 1))&&((this.vect[0] == 1)&&(this.vect[1] == 0)||(this.vect[0] == 0) && (this.vect[1] == 1))){
             return true;
         }
         return false;
     }
 
-    @Override
-    public boolean baseCanonica(T lolo) {
-        // TODO Auto-generated method stub
-        return false;
-    }
-    
+       
     
     public boolean equalS(Vector o){
         double[] lolo = o.getVect();
@@ -86,5 +80,6 @@ public class Vector implements Operators{
         return true;
         
     }
+
     
 }
