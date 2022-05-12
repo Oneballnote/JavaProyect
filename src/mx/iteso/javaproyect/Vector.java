@@ -1,7 +1,8 @@
 package mx.iteso.javaproyect;
 
 public class Vector implements OperatorsVect{
-    private double[] vect = new double[3];
+        private Estados E1 =  Estados.CORRECTO;
+        private double[] vect = new double[3];
 
    public Vector(double[] vect){
         setVect(vect);
@@ -18,8 +19,9 @@ public class Vector implements OperatorsVect{
     public double[] suma(double[] x) {
 
         for(int i = 0; i < 3;i++){
-            this.vect[i] = (double) x[i];
+            this.vect[i] +=  x[i];
         } 
+        System.out.println(E1.toString());
         return this.vect;
     }
 
@@ -66,10 +68,8 @@ public class Vector implements OperatorsVect{
         }
         return false;
     }
-
-       
     
-    public boolean equalS(Vector o){
+    public boolean equals(Vector o){
         double[] lolo = o.getVect();
 
         for (int i = 0; i < 3; i++) {
