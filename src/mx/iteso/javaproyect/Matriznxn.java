@@ -72,10 +72,10 @@ public class Matriznxn implements Operators{
 		{
 			for(int j = 0; i < M2.length; i++)
 			{
-				MR[i][j] = M1[i][j] - M2[i][j];
+				this.MR[i][j] = M1[i][j] - M2[i][j];
 			}
 		}				
-		return MR;
+		return this.MR;
 	}
 
 
@@ -91,7 +91,7 @@ public class Matriznxn implements Operators{
 	}
 	
 	
-	public void imprimirMatriz() {
+	public void toString() {
 		
 		for(int i = 0; i < M1.length; i++)
 		{
