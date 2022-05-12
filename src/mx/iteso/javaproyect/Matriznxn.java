@@ -1,11 +1,11 @@
 package mx.iteso.javaproyect;
 
-public class Matriznxn implements Operators{
+public class Matriznxn implements operatorsM{
 	
-	private double M1[][] = new double [3][3];
-	private double M2[][] = new double [3][3];
+	protected double M1[][] = new double [3][3];
+	protected double M2[][] = new double [3][3];
 	
-	private double MR[][] = new double [3][3]; 
+	protected double MR[][] = new double [3][3]; 
 	
 	public Matriznxn(double[][] M1, double[][] M2){
 		setM1(M1);
@@ -53,9 +53,10 @@ public class Matriznxn implements Operators{
 		}
 
 	}
-
-
-	public double[][] suma(double[][] x) {
+	
+	
+	@Override
+	public double[][] suma() {
 		for(int i = 0; i < M1.length; i++)
 		{
 			for(int j = 0; i < M2.length; i++)
@@ -66,79 +67,15 @@ public class Matriznxn implements Operators{
 		return this.MR;
 	}
 
-
-	public double[][] resta(double[][] x) {
+	@Override
+	public double[][] resta() {
 		for(int i = 0; i < M1.length; i++)
 		{
 			for(int j = 0; i < M2.length; i++)
 			{
-				this.MR[i][j] = M1[i][j] - M2[i][j];
+				MR[i][j] = M1[i][j] - M2[i][j];
 			}
 		}				
-		return this.MR;
+		return MR;
 	}
-
-
-	public double[][] producto(double[][] x) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	public double[][] productoxEscalar(int y) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	
-	public void toString() {
-		
-		for(int i = 0; i < M1.length; i++)
-		{
-			for(int j = 0; j < M1.length; j++)
-			{
-				System.out.println("[ " + M1[i][j] + " ]");
-			}
-			
-			if (i == 1)
-			{
-				System.out.println("  +   ");
-			}else {
-				System.out.println("      ");
-			}
-			
-			for (int j = 0; j < M2.length; j++)
-			{
-				System.out.println("[ " + M2[i][j] + " ]");
-			}
-			
-			if(i == 1) 
-			{
-				System.out.println("  -   ");
-			}else {
-				System.out.println("      ");
-			}
-			
-			for(int j = 0; j < MR.length; j++)
-			{
-				System.out.println("[ " + MR[i][j] + " ]");
-			}
-			System.out.println(" ");
-		}
-	}
-
-	@Override
-	public boolean independenciaLineal() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean baseCanonica(double[] lolo, double[] lala){
-	
-		
-		
-		return false;
-	}
-
-	
 }
