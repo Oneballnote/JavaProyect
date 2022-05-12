@@ -72,12 +72,7 @@ public class Vector implements OperatorsVect{
         return segundaMatriz;
     }
 
-    @Override
-    public boolean independenciaLineal() {
-        // TODO Auto-generated method stub
-        return false;
-    }
-    @Override
+   @Override
     public boolean baseCanonica(double[] lolo){
         
         if(((lolo[0] == 1)&&(lolo[1] == 0)||(lolo[0] == 0) && (lolo[1] == 1))&&((this.vect[0] == 1)&&(this.vect[1] == 0)||(this.vect[0] == 0) && (this.vect[1] == 1))){

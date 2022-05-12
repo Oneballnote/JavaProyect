@@ -49,17 +49,7 @@ public class OperadoresM implements OperatorsM{
 		return this.MR;
 	}
 
-	@Override
-	public boolean independenciaLineal() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean baseCanonica(double[][] lolo) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
 
 	
 	public void obtenerCofactor(int[][] M, int[][] temp, int p, int q, int n) {
