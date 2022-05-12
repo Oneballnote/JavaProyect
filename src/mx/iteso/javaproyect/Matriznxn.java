@@ -91,7 +91,7 @@ public class Matriznxn implements Operators{
 	}
 	
 	
-	public void imprimirMatriz() {
+	public void toString() {
 		
 		for(int i = 0; i < M1.length; i++)
 		{
