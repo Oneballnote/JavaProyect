@@ -19,20 +19,18 @@ public class Matriznxn extends MetodosMatriz{
 		}
 		return this.MR == o;
 	}
-    public void imprimirMatriz() {
-		
-		for(int i = 0; i < MR.length; i++)
-		{		
-			for(int j = 0; j < MR.length; j++)
+    public String toString() {
+		String msg = "";
+		int j = 0;
+		for(int i = 0; i < MR.length; i++){
+						
+			for(j = 0; j < MR[i].length; j++)
 			{
-				System.out.println("[ " + MR[i][j] + " ]");
+				msg +=  this.MR[i][j] + " " ;
 			}
-			if (i == 1)
-			{
-				System.out.println("  +   ");
-			}else {
-				System.out.println("      ");
-			}
+			msg += "\n";
+			
 		}
+		 return msg;
 	}
 }

@@ -3,8 +3,8 @@ package mx.iteso.javaproyect;
 public class MetodosMatriz extends Determinante implements OperatorsMatriz{
     protected int MR[][]; 
 	
-	public MetodosMatriz(int[][] M1){
-		setMR(M1);
+	public MetodosMatriz(int[][] MR){
+		setMR(MR);
 	}
 
 	public int[][] getMR() {return MR;}
@@ -49,13 +49,7 @@ public class MetodosMatriz extends Determinante implements OperatorsMatriz{
 		return this.MR;
 	}
 
-	@Override
-	public boolean baseCanonica(int[][] lolo) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
+@Override
 	public int[][] MultipM(int[][] r) {
 		int[][] c = new int[this.MR.length][r[0].length];
 	    // se comprueba si las matrices se pueden multiplicar
@@ -72,5 +66,9 @@ public class MetodosMatriz extends Determinante implements OperatorsMatriz{
 	     //si no se cumple la condición se retorna una matriz vacía
 	    return c;
 	}
+	public Object clone(){
+        Matriznxn matrizClone = new Matriznxn(this.MR);
+        return matrizClone;
+    }
 
 }

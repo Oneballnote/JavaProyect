@@ -98,7 +98,11 @@ public class Vector implements OperatorsVect{
             }
         }
         return true;
-        
+    }
+
+    public Object clone(){
+        Vector vectorClone = new Vector(this.vect);
+        return vectorClone;
     }
 
     
