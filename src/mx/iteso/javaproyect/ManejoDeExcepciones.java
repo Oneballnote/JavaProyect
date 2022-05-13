@@ -4,8 +4,6 @@ public class ManejoDeExcepciones extends Exception{
 
     public ManejoDeExcepciones(){
         super();
-    }
-
-    
+    }  
 
 }

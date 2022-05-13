@@ -30,6 +30,7 @@ public class Vector implements OperatorsVect{
         for(int i = 0; i < this.vect.length; i++){
             this.vect[i] -= x[i];
         }
+        System.out.println(E1.toString());
         return this.vect;
     }
 
@@ -38,28 +39,11 @@ public class Vector implements OperatorsVect{
         for(int i = 0; i < this.vect.length;i++){
             this.vect[i] *= y;
         }
+        System.out.println(E1.toString());
         return this.vect;
     }
 
-    @Override
-    public String toString(){
-        String msg = " ";
-
-        try{
-            if(this.vect[2] == 0 ){
-                msg = String.format("Vector: [%.2f], [%.2f]", this.vect[0],this.vect[1]);
     
-            }else{
-                msg = String.format("Vector: [%.2f], [%.2f], [%.2f]", this.vect[0],this.vect[1],this.vect[2]);
-                
-            }
-        }catch(ArrayIndexOutOfBoundsException e){
-           
-            msg = String.format("Vector: [%.2f], [%.2f]", this.vect[0],this.vect[1]);
-
-        }
-            return msg;
-    }
     public int[] productoCruz(int[] segundaMatriz){
         try {
             int[] terceraMatriz = {0,0,0};
@@ -71,12 +55,13 @@ public class Vector implements OperatorsVect{
                 terceraMatriz[1] = (this.vect[2]*segundaMatriz[0])-(this.vect[0]*segundaMatriz[2]);
                 terceraMatriz[2] = (this.vect[0]*segundaMatriz[1])-(this.vect[1]*segundaMatriz[0]);
                 this.vect = terceraMatriz;
+                System.out.println(E1.toString());
                 return this.vect;
             }
         } catch (ManejoDeExcepciones e) {
             System.out.println("Este metodo funciona solo con vectores en R3");
         }
-       
+        System.out.println(E1.toString());
         return this.vect;
     }
 
@@ -84,9 +69,22 @@ public class Vector implements OperatorsVect{
     public boolean baseCanonica(int[] lolo){
         
         if(((lolo[0] == 1)&&(lolo[1] == 0)||(lolo[0] == 0) && (lolo[1] == 1))&&((this.vect[0] == 1)&&(this.vect[1] == 0)||(this.vect[0] == 0) && (this.vect[1] == 1))){
+            
+            System.out.println(E1.toString());
             return true;
         }
+        System.out.println(E1.toString());
         return false;
+    }
+
+    @Override
+    public String toString(){
+        String msg = " ";
+
+       for (int i = 0; i < vect.length; i++) {
+           msg += this.vect[i] + " ";
+       }
+            return msg;
     }
     
     public boolean equals(Vector o){
@@ -100,7 +98,7 @@ public class Vector implements OperatorsVect{
         return true;
     }
 
-    public Object clone(){
+    public Vector clone(){
         Vector vectorClone = new Vector(this.vect);
         return vectorClone;
     }

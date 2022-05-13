@@ -1,6 +1,7 @@
 package mx.iteso.javaproyect;
 
 public class MetodosMatriz extends Determinante implements OperatorsMatriz{
+	private Estados E1 =  Estados.CORRECTO;
     protected int MR[][]; 
 	
 	public MetodosMatriz(int[][] MR){
@@ -21,7 +22,8 @@ public class MetodosMatriz extends Determinante implements OperatorsMatriz{
 			{
 				this.MR[i][j] +=  matrizASumar[i][j];
 			}
-		}		
+		}	
+		System.out.println(E1.toString());
 		return this.MR;
 	}
 
@@ -33,7 +35,8 @@ public class MetodosMatriz extends Determinante implements OperatorsMatriz{
 			{
 				this.MR[i][j] -=  matrizARestar[i][j];
 			}
-		}				
+		}
+		System.out.println(E1.toString());
 		return MR;
 	}
 
@@ -46,6 +49,7 @@ public class MetodosMatriz extends Determinante implements OperatorsMatriz{
 				this.MR[i][j] *= z;
 			}
 		}
+		System.out.println(E1.toString());
 		return this.MR;
 	}
 
@@ -64,11 +68,9 @@ public class MetodosMatriz extends Determinante implements OperatorsMatriz{
 	        }
 	    }
 	     //si no se cumple la condición se retorna una matriz vacía
+		 System.out.println(E1.toString());
 	    return c;
 	}
-	public Object clone(){
-        Matriznxn matrizClone = new Matriznxn(this.MR);
-        return matrizClone;
-    }
+	
 
 }

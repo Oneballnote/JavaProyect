@@ -2,9 +2,6 @@ package mx.iteso.javaproyect;
 
 public class Matriznxn extends MetodosMatriz{
 	
-	
-	// determinante
-
 	public Matriznxn(int[][] MR) {
 		super(MR);
 	}
@@ -33,4 +30,9 @@ public class Matriznxn extends MetodosMatriz{
 		}
 		 return msg;
 	}
+
+	public Matriznxn clone(){
+        Matriznxn matrizClone = new Matriznxn(this.MR);
+        return matrizClone;
+    }
 }
